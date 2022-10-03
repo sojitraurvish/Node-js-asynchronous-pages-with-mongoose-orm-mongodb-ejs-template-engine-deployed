@@ -1,0 +1,30 @@
+how to use or generate own ssl certificate this is to learn only because your browser will not allow your certificate so you will have to use or issue certificate from your hosting provider
+
+go to  if linux or mac then already installed
+1 > openssl windows
+2 > Binaries - OpenSSLWiki
+3 > OpenSSL for Windows -> https://slproweb.com/products/Win32OpenSSL.html
+4 > Win64 Win64 OpenSSL v3.0.5 Light
+    EXE | MSI
+
+after installation add this path into environment variable
+C:\Program Files\OpenSSL-Win64\bin her put \bin at the end of path
+
+https://www.youtube.com/watch?v=jrHnP6Gazf0
+
+to check is it installed or not use this command in cod
+>openssl version -a
+
+//to genrate sertificate
+openssl req -nodes -new -x509 -keyout server.key -out server.cert
+
+Country Name (2 letter code) [AU]:IN
+State or Province Name (full name) [Some-State]:Gujrat
+Locality Name (eg, city) []:Surat
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:mine
+Organizational Unit Name (eg, section) []:Education
+Common Name (e.g. server FQDN or YOUR name) []:localhost or domain name
+Email Address []:sojitraurvish0@gmail.com
+
+now it will generate two thing private key and sertificate(public key) and it serve to client 
+then client encrypt data with this sertificate and send back to server and server will decrypt data with pivate key 
